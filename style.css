@@ -154,14 +154,13 @@ button:hover {
 }
 
 .product-card {
-  position: relative;
   display: grid;
   grid-template-areas:
     "title img"
     "items img";
   padding: 40px;
   justify-content: space-between;
-  grid-template-rows: 100px auto;
+  grid-template-rows: auto auto;
   column-gap: 70px;
   border-radius: 32px;
   border: 2px solid rgba(0, 0, 0, 0.04);
@@ -170,6 +169,10 @@ button:hover {
   background-color: white;
   max-width: 1200px;
   height: 430px;
+}
+
+.product-card--1 {
+  position: relative;
 }
 
 .product-card__title {
@@ -191,7 +194,7 @@ button:hover {
   grid-area: img;
 }
 
-.product-card--two {
+.product-card--2 {
   position: absolute;
   z-index: 3;
   top: 25px;
@@ -199,7 +202,7 @@ button:hover {
   width: 100%;
 }
 
-.product-card--three {
+.product-card--3 {
   position: absolute;
   z-index: 2;
   top: 50px;
