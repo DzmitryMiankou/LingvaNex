@@ -18,6 +18,10 @@
   font-family: Inter;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -30,6 +34,7 @@ button {
   border: 1px solid transparent;
   height: 64px;
   transition: 200ms;
+  font-weight: 600;
 }
 
 button:hover {
@@ -84,8 +89,10 @@ button:hover {
   padding: 140px 0px;
 }
 .language-section__title,
+.product-card__title,
 .product-section__title {
   font-size: 60px;
+  font-weight: 900;
 }
 
 .cards {
@@ -121,4 +128,96 @@ button:hover {
 
 .card__img {
   width: 100%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 70px;
+}
+
+.buttons__button {
+  width: auto;
+  height: auto;
+  padding: 16px, 32px, 16px, 32px;
+}
+.product-cards {
+  margin-top: 30px;
+  width: 88%;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.product-card__items {
+  list-style-position: inside;
+}
+
+.product-card {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "title img"
+    "items img";
+  padding: 40px;
+  justify-content: space-between;
+  grid-template-rows: 100px auto;
+  column-gap: 70px;
+  border-radius: 32px;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  z-index: 4;
+  background-color: white;
+  max-width: 1200px;
+  height: 430px;
+}
+
+.product-card__title {
+  grid-area: title;
+}
+
+.product-card__items {
+  grid-area: items;
+  align-self: flex-start;
+}
+
+.product-card__item {
+  font-size: 18px;
+  color: var(--gray-color-text);
+  font-weight: 400;
+}
+
+.product-card__img {
+  grid-area: img;
+}
+
+.product-card--two {
+  position: absolute;
+  z-index: 3;
+  top: 25px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.product-card--three {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.buttons__button {
+  background-color: rgba(244, 246, 253, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.buttons__button--active {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.product-card__button {
+  margin-top: 100px;
 }
