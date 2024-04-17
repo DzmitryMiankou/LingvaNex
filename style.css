@@ -3,6 +3,15 @@
   src: url("./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
 }
 
+@keyframes activeCard {
+  0% {
+    transform: translate(-400px, 200px) scale(0.2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
 :root {
   --max-width: 1900px;
   --black-color: black;
@@ -139,6 +148,7 @@ button {
   width: auto;
   height: auto;
   padding: 16px, 32px, 16px, 32px;
+  z-index: 10;
 }
 .product-cards {
   margin-top: 30px;
@@ -169,21 +179,10 @@ button {
   height: 430px;
 }
 
-@keyframes openMenu {
-  0% {
-    transform: translate(0, -40px);
-    transform: scale(0.97);
-  }
-  100% {
-    transform: translate(0, 0);
-    transform: scale(1);
-  }
-}
-
 .product-card--1 {
   position: relative;
-  animation-name: openMenu;
-  animation-duration: 1000ms;
+  animation-name: activeCard;
+  animation-duration: 800ms;
   transition-timing-function: ease-in;
 }
 
