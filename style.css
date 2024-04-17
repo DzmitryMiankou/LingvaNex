@@ -37,12 +37,6 @@ button {
   font-weight: 600;
 }
 
-button:hover {
-  background-color: transparent;
-  border: 1px solid var(--blue-color);
-  color: var(--black-color);
-}
-
 .main-wrapper {
   max-width: var(--max-width);
   width: 100%;
@@ -52,7 +46,8 @@ button:hover {
 
 .travel-section,
 .language-section,
-.product-section {
+.product-section,
+.help-section {
   display: grid;
   place-items: center;
 }
@@ -60,6 +55,7 @@ button:hover {
 .travel-section__title,
 .language-section__title,
 .travel-section__text,
+.help-section__title,
 .language-section__text {
   text-align: center;
 }
@@ -89,6 +85,7 @@ button:hover {
   padding: 140px 0px;
 }
 .language-section__title,
+.help-section__title,
 .product-card__title,
 .product-section__title {
   font-size: 60px;
@@ -116,7 +113,8 @@ button:hover {
   border-radius: 32px;
 }
 
-.card-wrapper__title {
+.card-wrapper__title,
+.help-card__title {
   font-size: 34px;
   font-weight: 900;
 }
@@ -174,7 +172,7 @@ button:hover {
 @keyframes openMenu {
   0% {
     transform: translate(0, -40px);
-    transform: scale(0.9);
+    transform: scale(0.97);
   }
   100% {
     transform: translate(0, 0);
@@ -198,7 +196,8 @@ button:hover {
   align-self: flex-start;
 }
 
-.product-card__item {
+.product-card__item,
+.help-card__text {
   font-size: 18px;
   color: var(--gray-color-text);
   font-weight: 400;
@@ -236,4 +235,33 @@ button:hover {
 
 .product-card__button {
   margin-top: 100px;
+}
+
+.help-section {
+  padding: 65px 0;
+  background-color: rgba(244, 246, 253, 1);
+}
+
+.help-wrapper,
+.help-cards,
+.help-card {
+  display: grid;
+  place-items: center;
+}
+
+.help-wrapper {
+  width: 70%;
+}
+
+.help-cards {
+  gap: 56px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 70px 0;
+}
+
+.help-card {
+  text-align: center;
+  max-width: 320px;
+  display: grid;
+  gap: 15px;
 }
