@@ -171,8 +171,22 @@ button:hover {
   height: 430px;
 }
 
+@keyframes openMenu {
+  0% {
+    transform: translate(0, -40px);
+    transform: scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0);
+    transform: scale(1);
+  }
+}
+
 .product-card--1 {
   position: relative;
+  animation-name: openMenu;
+  animation-duration: 1000ms;
+  transition-timing-function: ease-in;
 }
 
 .product-card__title {
