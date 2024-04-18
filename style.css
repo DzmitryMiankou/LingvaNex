@@ -159,7 +159,7 @@ button {
 }
 
 .product-card__items {
-  list-style-position: inside;
+  padding-left: 30px;
 }
 
 .product-card {
@@ -169,7 +169,6 @@ button {
     "items img";
   padding: 40px;
   justify-content: space-between;
-  grid-template-rows: auto auto;
   column-gap: 70px;
   border-radius: 32px;
   border: 2px solid rgba(0, 0, 0, 0.04);
