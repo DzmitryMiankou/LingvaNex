@@ -10,9 +10,8 @@ const buttons = [...document.querySelectorAll(".buttons__button")];
 const cardsAll = [...document.querySelectorAll(".product-card")];
 
 function cards() {
-  for (let i = 0; i !== cardsAll.length; i++) {
+  for (let i = 0; i !== cardsAll.length; i++)
     cardsAll[i].classList.add(`product-card--${i + 1}`);
-  }
 
   function controlStyleCards(params) {
     const activeCard = cardsAll.find(
