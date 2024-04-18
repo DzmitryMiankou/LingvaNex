@@ -319,4 +319,26 @@ button {
   .main-wrapper {
     padding: 70px 20px;
   }
+  .travel-section__title {
+    font-size: 50px;
+  }
+  .language-section__title,
+  .product-section__title,
+  .help-section__title {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .buttons__button {
+    padding: 5px;
+  }
+  .help-card__title {
+    font-size: 25px;
+  }
+  button {
+    width: auto;
+    font-size: 18px;
+    padding: 5px;
+  }
 }
